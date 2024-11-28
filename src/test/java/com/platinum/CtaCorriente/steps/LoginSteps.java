@@ -20,7 +20,7 @@ import java.time.Duration;
 public class LoginSteps {
 	
 	 WebDriver driver;
-    @Given("El usuario está en la página de inicio de sesión")
+    @Given("El usuario esta en la pagina de inicio de sesion")
     public void el_usuario_está_en_la_página_de_inicio_de_sesión() throws InterruptedException {
         // Configurar la ubicación del FirefoxDriver
         System.setProperty("webdriver.gecko.driver", "D:/Java Projects/Automatizacion_Final/chrome-win64/geckodriver.exe");
@@ -31,7 +31,7 @@ public class LoginSteps {
         Thread.sleep(5000);
     }
 
-    @When("El usuario ingresa un nombre de usuario y una contraseña válidos")
+    @When("El usuario ingresa un nombre de usuario y una contrasena validos")
     public void el_usuario_ingresa_un_nombre_de_usuario_y_una_contraseña_válidos() {
         WebElement username = driver.findElement(By.id("username"));
         WebElement password = driver.findElement(By.id("password"));
@@ -48,7 +48,7 @@ public class LoginSteps {
         assertTrue(driver.getCurrentUrl().contains("/menuUsuario"));
     }
 
-    @When("El usuario ingresa un nombre de usuario y una contraseña incorrectos")
+    @When("El usuario ingresa un nombre de usuario y una contrasena incorrectos")
     public void el_usuario_ingresa_un_nombre_de_usuario_y_una_contraseña_incorrectos() {
         WebElement username = driver.findElement(By.id("username"));
         WebElement password = driver.findElement(By.id("password"));
@@ -59,14 +59,14 @@ public class LoginSteps {
         loginButton.click();
     }
 
-    @Then("El usuario debe ver un mensaje de error de \"Credenciales incorrectas\"")
+    @Then("El usuario debe ver un mensaje de error de Credenciales incorrectas")
     public void el_usuario_debe_ver_un_mensaje_de_error() {
         
     	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     	    WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("errorMessage")));
     	    
     	    // Verificar que el mensaje de error contiene el texto esperado
-    	    assertTrue(errorMessage.getText().contains("Credenciales inválidas"));
+    	    assertTrue(errorMessage.getText().contains("Credenciales invalidas"));
     }
 
   
