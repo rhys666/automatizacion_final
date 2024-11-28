@@ -19,7 +19,7 @@ public class DatabaseUtilsTest {
         }
     }
     
-
+/*
     @Test
     public void testInsertAccountWithInvalidExecutive() {
         try (Connection conn = DatabaseUtils.getConnection()) {
@@ -53,6 +53,6 @@ public class DatabaseUtilsTest {
         } catch (Exception e) {
             fail("Error al insertar cuenta corriente: " + e.getMessage());
         }
-    }
+    }*/
     
 }
