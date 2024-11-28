@@ -1,0 +1,58 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <display-name>Banco Platinum</display-name>
+
+    <!-- Login Servlet -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.platinum.CtaCorriente.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    
+
+    <!-- Register Servlet -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.platinum.CtaCorriente.servlets.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <!-- Transfer Servlet -->
+    <servlet>
+        <servlet-name>TransferServlet</servlet-name>
+        <servlet-class>com.platinum.CtaCorriente.servlets.TransferServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TransferServlet</servlet-name>
+        <url-pattern>/transfer</url-pattern>
+    </servlet-mapping>
+    
+     <!--Register Account Servlet -->
+    <servlet>
+	    <servlet-name>RegisterAccountServlet</servlet-name>
+	    <servlet-class>com.platinum.CtaCorriente.servlets.RegisterAccountServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>RegisterAccountServlet</servlet-name>
+	    <url-pattern>/RegisterAccountServlet</url-pattern>
+	</servlet-mapping>
+    
+        <!-- Logout Servlet -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.platinum.CtaCorriente.servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+</web-app>

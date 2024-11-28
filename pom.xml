@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.platinum</groupId>
+  <artifactId>CtaCorriente</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+      <dependencies>
+         <!-- Servlet API -->
+        <dependency>
+		    <groupId>jakarta.servlet</groupId>
+		    <artifactId>jakarta.servlet-api</artifactId>
+		    <version>5.0.0</version>
+		    <scope>provided</scope>
+		</dependency>
+		<!-- JSP API -->
+		<dependency>
+		    <groupId>jakarta.servlet.jsp</groupId>
+		    <artifactId>jakarta.servlet.jsp-api</artifactId>
+		    <version>3.0.0</version>
+		    <scope>provided</scope>
+		</dependency>
+		  <!-- JSTL -->
+		<dependency>
+		    <groupId>jakarta.servlet.jsp.jstl</groupId>
+		    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+		    <version>3.0.2</version>
+		</dependency>
+        <!-- MySQL Connector -->
+        <dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.33</version>
+		</dependency>
+		
+		<!-- JUnit 5 -->
+	    <dependency>
+	        <groupId>org.junit.jupiter</groupId>
+	        <artifactId>junit-jupiter</artifactId>
+	        <version>5.10.0</version>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Mocking library for testing -->
+	    <dependency>
+	        <groupId>org.mockito</groupId>
+	        <artifactId>mockito-core</artifactId>
+	        <version>5.5.0</version>
+	        <scope>test</scope>
+	    </dependency>
+	     <!-- Selenium WebDriver -->
+	    <dependency>
+	        <groupId>org.seleniumhq.selenium</groupId>
+	        <artifactId>selenium-java</artifactId>
+	        <version>4.9.0</version>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Cucumber -->
+	    <dependency>
+	        <groupId>io.cucumber</groupId>
+	        <artifactId>cucumber-java</artifactId>
+	        <version>7.10.0</version>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Cucumber JUnit -->
+	    <dependency>
+	        <groupId>io.cucumber</groupId>
+	        <artifactId>cucumber-junit</artifactId>
+	        <version>7.10.0</version>
+	        <scope>test</scope>
+	    </dependency>
+    </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>21</release>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
