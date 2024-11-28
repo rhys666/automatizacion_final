@@ -21,7 +21,7 @@ public class LoginSteps {
 	
 	 WebDriver driver;
     @Given("El usuario esta en la pagina de inicio de sesion")
-    public void el_usuario_está_en_la_página_de_inicio_de_sesión() throws InterruptedException {
+    public void el_usuario_esta_en_la_pagina_de_inicio_de_sesion() throws InterruptedException {
         // Configurar la ubicación del FirefoxDriver
         System.setProperty("webdriver.gecko.driver", "D:/Java Projects/Automatizacion_Final/chrome-win64/geckodriver.exe");
 
@@ -32,7 +32,7 @@ public class LoginSteps {
     }
 
     @When("El usuario ingresa un nombre de usuario y una contrasena validos")
-    public void el_usuario_ingresa_un_nombre_de_usuario_y_una_contraseña_válidos() {
+    public void el_usuario_ingresa_un_nombre_de_usuario_y_una_contrasena_validos() {
         WebElement username = driver.findElement(By.id("username"));
         WebElement password = driver.findElement(By.id("password"));
         WebElement loginButton = driver.findElement(By.id("loginButton"));
@@ -49,7 +49,7 @@ public class LoginSteps {
     }
 
     @When("El usuario ingresa un nombre de usuario y una contrasena incorrectos")
-    public void el_usuario_ingresa_un_nombre_de_usuario_y_una_contraseña_incorrectos() {
+    public void el_usuario_ingresa_un_nombre_de_usuario_y_una_contrasena_incorrectos() {
         WebElement username = driver.findElement(By.id("username"));
         WebElement password = driver.findElement(By.id("password"));
         WebElement loginButton = driver.findElement(By.id("loginButton"));
