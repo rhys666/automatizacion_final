@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clonar el repositorio
-                git branch: 'main', url: 'https://github.com/tu-usuario/CtaCorriente.git'
+                git branch: 'main', url: 'https://github.com/rhys666/automatizacion_final'
             }
         }
         
